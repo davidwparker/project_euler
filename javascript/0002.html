@@ -1,0 +1,19 @@
+<script>
+var sum = 0, one = 1, two = 2, high = 0, fibNums = [2];
+while (high < 4000000){
+  sum = one + two;
+
+  if (sum % 2 === 0){
+    var len = fibNums.length;
+    fibNums[len] = sum;
+    high = sum;
+  }
+  one = two;
+  two = sum;
+}
+sum = 0;
+for (var count = 0; count < fibNums.length; count++){
+  sum += fibNums[count];
+}
+document.write("total= ", sum, "<br />");
+</script>
