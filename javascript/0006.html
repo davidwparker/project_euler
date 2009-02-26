@@ -1,0 +1,22 @@
+<p>The sum of the squares of the first ten natural numbers is,</p>
+<p>1^(2) + 2^(2) + ... + 10^(2) = 385</p>
+
+<p>The square of the sum of the first ten natural numbers is,</p>
+<p>(1 + 2 + ... + 10)^(2) = 55^(2) = 3025</p>
+
+<p>Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 - 385 = 2640.</p>
+
+<p>Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.</p>
+<script>
+(function(){
+  var sumSq = 0, sqSum = 0, total = 0;
+  for (var i = 1; i < 101; i++){
+       sumSq += Math.pow(i,2);
+       total += i;
+  }
+  sqSum = Math.pow(total, 2);
+  document.write("Square of the Sums: ", sqSum, "<br />");
+  document.write("Sum of the Squares: ", sumSq, "<br />");
+  document.write("Difference: ", sqSum - sumSq);
+})();
+</script>
